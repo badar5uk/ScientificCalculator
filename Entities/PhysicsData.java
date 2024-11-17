@@ -4,6 +4,15 @@ public class PhysicsData extends BaseData{
     private MotionData motionData;
     private Float mass;
     private Float acceleration;
+    private Float volume;
+
+    public Float getVolume() {
+        return volume;
+    }
+
+    public void setVolume(Float volume) {
+        this.volume = volume;
+    }
 
     public MotionData getMotionData() {
         return motionData;
