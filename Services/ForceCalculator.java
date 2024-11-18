@@ -17,15 +17,18 @@ public class ForceCalculator implements CalculatorInterface {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static void force(){
-        PhysicsData physics = new PhysicsData();
-        System.out.println("Enter Mass: ");
-        physics.setMass(scanner.nextFloat());
-        System.out.println("Enter Acceleration: ");
-        physics.setAcceleration(scanner.nextFloat());
-    }
     @Override
     public void calculate() {
+        PhysicsData physics = new PhysicsData();
+        System.out.println("Enter Mass: ");
+        Float m = scanner.nextFloat();
+        physics.setMass(m);
+        System.out.println("Enter Acceleration: ");
+        Float a = scanner.nextFloat();
+        physics.setAcceleration(a);
 
+        Float force = m*a;
+
+        System.out.println("The force is equal to "+force +"\n");
     }
 }
