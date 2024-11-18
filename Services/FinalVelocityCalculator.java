@@ -31,5 +31,8 @@ public class FinalVelocityCalculator implements CalculatorInterface{
         Float t = scanner.nextFloat();
         motion.setTime(t);
 
+        Float finalVelocity = u + (a*t);
+
+        System.out.println("The final velocity is equal to : " + finalVelocity + "\n");
     }
 }
