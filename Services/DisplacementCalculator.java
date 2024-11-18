@@ -8,10 +8,8 @@
  */
 
 package ScientificCalculator.Services;
-
 import ScientificCalculator.Entities.MotionData;
 import ScientificCalculator.Interfaces.CalculatorInterface;
-
 import java.util.Scanner;
 
 public class DisplacementCalculator implements CalculatorInterface{
@@ -32,5 +30,8 @@ public class DisplacementCalculator implements CalculatorInterface{
         Float t = scanner.nextFloat();
         motion.setTime(t);
 
+        Float displacement = (float) ((u*t) + (0.5 * a * Math.pow(t,2)));
+
+        System.out.println("The displacement is equal to: " + displacement + "\n");
     }
 }
