@@ -1,10 +1,10 @@
 /*
     This service is used to calculate the final velocity of an object.
     A scanner is used to take input for the Initial Velocity, Acceleration and time.
-    The final velocity is calculated using v = u + at
+    The final velocity squared is calculated using v² = u² + 2as
     u = initial velocity
     a = acceleration
-    t = time
+    s = distance traveled
  */
 
 package ScientificCalculator.Services;
@@ -27,8 +27,12 @@ public class FinalVelocitySquaredCalculator implements CalculatorInterface{
         System.out.println("Enter Acceleration: ");
         Float a = scanner.nextFloat();
         motion.setAcceleration(a);
-        System.out.println("Enter time: ");
-        Float t = scanner.nextFloat();
-        motion.setTime(t);
+        System.out.println("Enter distance traveled: ");
+        Float s = scanner.nextFloat();
+
+
+        Float velocitySquared = (float) (Math.pow(u,2) + 2*a*s);
+
+        System.out.println("The final velocity is equal to : " + velocitySquared + "\n");
     }
 }
