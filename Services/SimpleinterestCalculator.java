@@ -1,9 +1,10 @@
 /*
-    This service is used to calculate force of an object
-    A user input for mass and acceleration are taken via a scanner
-    The force is calculated using F = ma
-    m = mass
-    a= acceleration
+    This service is used to calculate Simple interest in a given duration
+    Scanners are used to take user input for Principal amount, Rate and Time
+    Simple interest is calculated using SI = P × R × T ÷ 100
+    P = Principal
+    R= rate
+    T = time
  */
 
 
@@ -18,17 +19,22 @@ public class SimpleinterestCalculator implements CalculatorInterface {
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static void interest(){
-        InterestData interest = new InterestData();
-        System.out.println("Enter principal amount: ");
-        interest.setPrincipal(scanner.nextFloat());
-        System.out.println("Enter Rate: ");
-        interest.setRate(scanner.nextFloat());
-        System.out.println("Enter Duration: ");
-        interest.setTime(scanner.nextFloat());
-    }
     @Override
     public void calculate() {
+        InterestData interest = new InterestData();
+        System.out.println("Enter principal amount: ");
+        Float p = scanner.nextFloat();
+        interest.setPrincipal(p);
+        System.out.println("Enter Rate: ");
+        Float r = scanner.nextFloat();
+        interest.setRate(r);
+        System.out.println("Enter Duration: ");
+        Float t = scanner.nextFloat();
+        interest.setTime(t);
 
+        Float simpleInterest = (p*r*t) / 100;
+
+        System.out.println("The simple interest is equal to: " + simpleInterest + "\n");
     }
 }
+
