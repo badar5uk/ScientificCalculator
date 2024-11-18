@@ -18,6 +18,8 @@ public class DisplacementCalculator implements CalculatorInterface{
 
     @Override
     public void calculate() {
+        // Using scanner to take input and set them
+        // to the motion object attributes
         Scanner scanner = new Scanner(System.in);
         MotionData motion= new MotionData();
         System.out.println("Enter initial Velocity: ");
@@ -30,6 +32,7 @@ public class DisplacementCalculator implements CalculatorInterface{
         Float t = scanner.nextFloat();
         motion.setTime(t);
 
+        // displacement = ut + ½at²
         Float displacement = (float) ((u*t) + (0.5 * a * Math.pow(t,2)));
 
         System.out.println("The displacement is equal to: " + displacement + "\n");

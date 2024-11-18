@@ -19,6 +19,8 @@ public class ForceCalculator implements CalculatorInterface {
 
     @Override
     public void calculate() {
+        // Using scanner to take input and set them
+        // to the physics object attributes
         PhysicsData physics = new PhysicsData();
         System.out.println("Enter Mass: ");
         Float m = scanner.nextFloat();
@@ -27,7 +29,7 @@ public class ForceCalculator implements CalculatorInterface {
         Float a = scanner.nextFloat();
         physics.setAcceleration(a);
 
-        Float force = m*a;
+        Float force = m*a;// force = mass * acceleration
 
         System.out.println("The force is equal to "+force +"\n");
     }

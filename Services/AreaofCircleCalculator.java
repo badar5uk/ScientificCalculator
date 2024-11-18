@@ -16,12 +16,15 @@ public class AreaofCircleCalculator implements CalculatorInterface {
 
     @Override
     public void calculate() {
+        // Using scanner to take input and set them
+        // to the circle entity attributes
         CircleData circle = new CircleData();
         System.out.println("Enter radius to calculate Area: ");
         Float r = scanner.nextFloat();
         circle.setRadius(r);
-        Float area = (float) (Math.PI * Math.pow(r,2));
+        Float area = (float) (Math.PI * Math.pow(r,2)); // A = πr²
         System.out.println("The area of the circle with radius "
                 + circle.getRadius() + " is equal to: " + area+"\n");
     }
 }
+

@@ -19,6 +19,8 @@ public class FinalVelocitySquaredCalculator implements CalculatorInterface{
 
     @Override
     public void calculate() {
+        // Using scanner to take input and set them
+        // to the motion object attributes
         Scanner scanner = new Scanner(System.in);
         MotionData motion= new MotionData();
         System.out.println("Enter initial Velocity: ");
@@ -30,7 +32,7 @@ public class FinalVelocitySquaredCalculator implements CalculatorInterface{
         System.out.println("Enter distance traveled: ");
         Float s = scanner.nextFloat();
 
-
+        //final velocity² = u² + 2as
         Float velocitySquared = (float) (Math.pow(u,2) + 2*a*s);
 
         System.out.println("The final velocity is equal to : " + velocitySquared + "\n");

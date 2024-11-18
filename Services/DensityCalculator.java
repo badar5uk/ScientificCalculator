@@ -19,6 +19,8 @@ public class DensityCalculator implements CalculatorInterface{
 
     @Override
     public void calculate() {
+        // Using scanner to take input and set them
+        // to the physics object attributes
         PhysicsData physics = new PhysicsData();
         System.out.println("Enter Mass: ");
         Float m = scanner.nextFloat();
@@ -27,7 +29,7 @@ public class DensityCalculator implements CalculatorInterface{
         Float v = scanner.nextFloat();
         physics.setVolume(v);
 
-        Float density = m/v;
+        Float density = m/v; // Density = Mass ÷ Volume
 
         System.out.println("The density is equal to: "+density + "\n");
     }

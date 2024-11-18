@@ -19,6 +19,8 @@ public class FinalVelocityCalculator implements CalculatorInterface{
 
     @Override
     public void calculate() {
+        // Using scanner to take input and set them
+        // to the motion object attributes
         Scanner scanner = new Scanner(System.in);
         MotionData motion= new MotionData();
         System.out.println("Enter initial Velocity: ");
@@ -31,7 +33,7 @@ public class FinalVelocityCalculator implements CalculatorInterface{
         Float t = scanner.nextFloat();
         motion.setTime(t);
 
-        Float finalVelocity = u + (a*t);
+        Float finalVelocity = u + (a*t);// final velocity = u + at
 
         System.out.println("The final velocity is equal to : " + finalVelocity + "\n");
     }

@@ -7,7 +7,6 @@
     T = time
  */
 
-
 package ScientificCalculator.Services;
 
 import ScientificCalculator.Entities.InterestData;
@@ -21,6 +20,8 @@ public class SimpleinterestCalculator implements CalculatorInterface {
 
     @Override
     public void calculate() {
+        // Using scanner to take input and set them
+        // to the interest data attributes
         InterestData interest = new InterestData();
         System.out.println("Enter principal amount: ");
         Float p = scanner.nextFloat();
@@ -32,6 +33,7 @@ public class SimpleinterestCalculator implements CalculatorInterface {
         Float t = scanner.nextFloat();
         interest.setTime(t);
 
+        // Simple Interest = P × R × T ÷ 100
         Float simpleInterest = (p*r*t) / 100;
 
         System.out.println("The simple interest is equal to: " + simpleInterest + "\n");
