@@ -8,26 +8,28 @@
  */
 
 package ScientificCalculator.Services;
-
 import ScientificCalculator.Entities.MotionData;
 import ScientificCalculator.Interfaces.CalculatorInterface;
 
 import java.util.Scanner;
 
-public class FinalVelocityCalculator implements CalculatorInterface {
+public class FinalVelocityCalculator implements CalculatorInterface{
 
     static Scanner scanner = new Scanner(System.in);
 
-    public static void velocity(){
-        MotionData motion = new MotionData();
-        System.out.println("Enter initial Velocity: ");
-        motion.setInitialVelocity(scanner.nextFloat());
-        System.out.println("Enter Acceleration: ");
-        motion.setAcceleration(scanner.nextFloat());
-        System.out.println("Enter time: ");
-        motion.setTime(scanner.nextFloat());
-    }
     @Override
     public void calculate() {
+        Scanner scanner = new Scanner(System.in);
+        MotionData motion= new MotionData();
+        System.out.println("Enter initial Velocity: ");
+        Float u = scanner.nextFloat();
+        motion.setInitialVelocity(u);
+        System.out.println("Enter Acceleration: ");
+        Float a = scanner.nextFloat();
+        motion.setAcceleration(a);
+        System.out.println("Enter time: ");
+        Float t = scanner.nextFloat();
+        motion.setTime(t);
+
     }
 }
