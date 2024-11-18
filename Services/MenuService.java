@@ -7,7 +7,7 @@ public class MenuService {
     static Scanner scanner = new Scanner(System.in);
 
     public static void mainMenu() {
-        Boolean exitFlag = false;
+        Boolean exitFlag = true;
         while (exitFlag) {
             System.out.println("welcome to my scientific Calculator app" + "\n" +
                     "Please pick an option: \n" +
@@ -23,23 +23,29 @@ public class MenuService {
             try {
                 Integer mainMenuInput = scanner.nextInt();
                 if (mainMenuInput.equals(1)) {
-
+                    FinalVelocityCalculator velocity = new FinalVelocityCalculator();
+                    velocity.calculate();
                 } else if (mainMenuInput.equals(2)) {
-
+                    DisplacementCalculator displacement = new DisplacementCalculator();
+                    displacement.calculate();
                 } else if (mainMenuInput.equals(3)) {
-
+                    FinalVelocitySquaredCalculator velocitySquared = new FinalVelocitySquaredCalculator();
+                    velocitySquared.calculate();
                 } else if (mainMenuInput.equals(4)) {
-
+                    AreaofCircleCalculator Area = new AreaofCircleCalculator();
+                    Area.calculate();
                 } else if (mainMenuInput.equals(5)) {
-
+                    SimpleinterestCalculator simpleInterest = new SimpleinterestCalculator();
+                    simpleInterest.calculate();
                 } else if (mainMenuInput.equals(6)) {
-
+                    ForceCalculator force = new ForceCalculator();
+                    force.calculate();
                 } else if (mainMenuInput.equals(7)) {
-
+                    /// implement menu option
                 } else if (mainMenuInput.equals(8)) {
 
                 } else if (mainMenuInput.equals(9)) {
-                    exitFlag = true;
+                    exitFlag = false;
                 }
             } catch (Exception e) {
                 System.out.println("Invalid input");
