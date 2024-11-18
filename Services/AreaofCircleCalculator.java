@@ -18,8 +18,9 @@ public class AreaofCircleCalculator implements CalculatorInterface {
     public void calculate() {
         CircleData circle = new CircleData();
         System.out.println("Enter radius to calculate Area: ");
-        circle.setRadius(scanner.nextFloat());
-        Float area = (float) (Math.PI * Math.pow(circle.getRadius(),2));
+        Float r = scanner.nextFloat();
+        circle.setRadius(r);
+        Float area = (float) (Math.PI * Math.pow(r,2));
         System.out.println("The area of the circle with radius "
                 + circle.getRadius() + " is equal to: " + area+"\n");
     }
