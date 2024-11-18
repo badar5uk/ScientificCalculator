@@ -41,9 +41,11 @@ public class MenuService {
                     ForceCalculator force = new ForceCalculator();
                     force.calculate();
                 } else if (mainMenuInput.equals(7)) {
-                    /// implement menu option
+                    DensityCalculator density = new DensityCalculator();
+                    density.calculate();
                 } else if (mainMenuInput.equals(8)) {
-
+                    CompoundInterest compoundInterest = new CompoundInterest();
+                    compoundInterest.calculate();
                 } else if (mainMenuInput.equals(9)) {
                     exitFlag = false;
                 }
