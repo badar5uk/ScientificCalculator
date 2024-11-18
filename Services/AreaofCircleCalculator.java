@@ -6,10 +6,8 @@
  */
 
 package ScientificCalculator.Services;
-
 import ScientificCalculator.Entities.CircleData;
 import ScientificCalculator.Interfaces.CalculatorInterface;
-
 import java.util.Scanner;
 
 public class AreaofCircleCalculator implements CalculatorInterface {
@@ -23,7 +21,7 @@ public class AreaofCircleCalculator implements CalculatorInterface {
         Float r = scanner.nextFloat();
         circle.setRadius(r);
         Float area = (float) (Math.PI * Math.pow(circle.getRadius(),2));
-        System.out.println("The area of the circle of radius " +circle.getRadius() +
-                " is equal to: " + area);
+        System.out.println("The area of the circle with radius "
+                + circle.getRadius() + " is equal to: " + area);
     }
 }
