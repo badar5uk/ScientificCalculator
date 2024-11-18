@@ -1,3 +1,11 @@
+/*
+    This service is used to calculate density of an object
+    A user input for mass and volume are taken via a scanner
+    The force is calculated using density = m ÷ v
+    m = mass
+    v= volume
+ */
+
 package ScientificCalculator.Services;
 
 import ScientificCalculator.Entities.PhysicsData;
@@ -13,8 +21,14 @@ public class DensityCalculator implements CalculatorInterface{
     public void calculate() {
         PhysicsData physics = new PhysicsData();
         System.out.println("Enter Mass: ");
-        physics.setMass(scanner.nextFloat());
+        Float m = scanner.nextFloat();
+        physics.setMass(m);
         System.out.println("Enter Volume: ");
-        physics.setAcceleration(scanner.nextFloat());
+        Float v = scanner.nextFloat();
+        physics.setVolume(v);
+
+        Float density = m/v;
+
+        System.out.println("The density is equal to: "+density + "\n");
     }
 }
