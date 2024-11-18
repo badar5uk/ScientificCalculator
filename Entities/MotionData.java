@@ -5,6 +5,15 @@ public class MotionData extends BaseData{
     private Float initialVelocity;
     private Float acceleration;
     private Float time;
+    private Float distance;
+
+    public Float getDistance() {
+        return distance;
+    }
+
+    public void setDistance(Float distance) {
+        this.distance = distance;
+    }
 
     public BaseData getBaseData() {
         return baseData;
